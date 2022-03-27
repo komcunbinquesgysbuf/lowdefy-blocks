@@ -18,7 +18,8 @@ import ContainerBlock from './blocks/ContainerBlock/ContainerBlock';
 import ContextBlock from './blocks/ContextBlock/ContextBlock';
 import DisplayBlock from './blocks/DisplayBlock/DisplayBlock';
 import InputBlock from './blocks/InputBlock/InputBlock';
+import FileReader from './blocks/FileReader/FileReader';
 import ListBlock from './blocks/ListBlock/ListBlock';
 
-export { ContainerBlock, ContextBlock, DisplayBlock, InputBlock, ListBlock };
-export default { ContainerBlock, ContextBlock, DisplayBlock, InputBlock, ListBlock };
+export { ContainerBlock, ContextBlock, DisplayBlock, InputBlock, FileReader, ListBlock };
+export default { ContainerBlock, ContextBlock, DisplayBlock, InputBlock, FileReader, ListBlock };

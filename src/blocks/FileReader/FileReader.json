@@ -1,0 +1,17 @@
+{
+  "category": "input",
+  "valueType": "object",
+  "loading": false,
+  "schema": {
+    "properties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string",
+          "description": "Input label."
+        }
+      }
+    }
+  }
+}
