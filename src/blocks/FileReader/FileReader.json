@@ -10,6 +10,18 @@
         "label": {
           "type": "string",
           "description": "Input label."
+        },
+        "description": {
+          "type": "string",
+          "description": "A help text explaining how to use the drop box"
+        },
+        "buttonLabel": {
+          "type": "string",
+          "description": "The label for the button when no file has been chosen"
+        },
+        "buttonChangeLabel": {
+          "type": "string",
+          "description": "The label for the button to replace the chosen file"
         }
       }
     }
