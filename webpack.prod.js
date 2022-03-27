@@ -24,7 +24,7 @@ const addRemoteEntryUrl = (content, absoluteFrom) => {
       version: packageJson.version,
       // unpkg can result in a unreliable module federation experience.
       // Deploy you block to your preferred static file host and update the remoteEntryUrl.
-      remoteEntryUrl: `https://zilbesveldoswinkos-lowdefy-blocks.onrender.com/dist/remoteEntry.js`,
+      remoteEntryUrl: `https://unpkg.com/${packageJson.name}@${packageJson.version}/dist/remoteEntry.js`,
     };
   }
   return JSON.stringify(meta);
