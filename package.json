@@ -6,6 +6,9 @@
   "files": [
     "dist/*"
   ],
+  "engines": {
+    "node": ">=17"
+  },
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "prepare": "yarn build",
