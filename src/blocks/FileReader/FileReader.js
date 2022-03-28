@@ -1,7 +1,7 @@
 import React from 'react';
 import {blockDefaultProps} from '@lowdefy/block-tools';
 
-const FileUpload = ({blockId, properties, methods: {makeCssClass, setValue}, value}) => {
+const FileUpload = ({blockId, properties, required, validation: {errors: [error]}, methods: {makeCssClass, setValue, ...otherMethods}, value, ...rest}) => {
     const wrapperClass = makeCssClass([{marginBottom: 0}, properties.style,]);
     const labelClass = makeCssClass([{
         display: 'block',
@@ -30,11 +30,11 @@ const FileUpload = ({blockId, properties, methods: {makeCssClass, setValue}, val
     return (
         <div
             id={blockId}
-            className={`ant-row ant-form-item ${wrapperClass}`}
+            className={`ant-row ant-form-item ${wrapperClass}${error && ' ant-form-item-has-feedback ant-form-item-has-error'}`}
         >
             <div
                 className='ant-col ant-form-item-label ant-form-item-label-left ant-col-xs-24 ant-col-sm-24'>
-                <label htmlFor={`${blockId}-input`} title={properties.label}>
+                <label htmlFor={`${blockId}-input`} title={properties.label} className={required ? 'ant-form-item-required' : ''}>
                     <span>{properties.label || 'Label'}</span>
                 </label>
             </div>
@@ -49,7 +49,7 @@ const FileUpload = ({blockId, properties, methods: {makeCssClass, setValue}, val
                 }}
             >
                 <label htmlFor={`${blockId}-input`} className={labelClass}>
-                    <p>
+                    <p className={value || !error ? '' : 'ant-form-item-explain ant-form-item-extra'}>
                         {value
                             ? <em>{value.name}</em>
                             : properties.description || 'Drop a document here or click to open the file chooser...'
